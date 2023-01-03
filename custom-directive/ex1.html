@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-tw" ng-app="app">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+
+  <h2>testing</h2>
+
+  <test-directive></test-directive>
+  <div class="test-directive"></div>
+
+</body>
+  <script>
+    var app = angular.module('app', []);
+
+    app.directive('testDirective',function(){
+      return {
+        /* 
+        E:element
+        A:attribute
+        C:class
+        M:comment
+
+        */
+        restrict:'EC',
+        template:"<h1>Hello</h1>",
+      }
+    })
+
+  </script>
+
+</html>
